@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joguinho Adivinhação</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="confuso.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <section class="container">
+
+    <h1 class="titulo">Seja bem vindo ao jogo da adivinhação!</h1>
+    <p class="texto">Tente descobrir o número</p>
+
+    <div class="separador">
+      <input class="input" type="text" placeholder="nº">
+      <button class="btn">Compare com o meu segredo</button>
+    </div>
+
+  </section>
+
+  <script>
+
+    var segredo = 5;
+    var input = document.querySelector("input");
+
+    function verifica() {
+      if (input.value == segredo) {
+        alert("Você Acertou!!");
+      } else {
+        alert("Você Errou!!");
+      }
+    }
+
+    var button = document.querySelector("button");
+
+    button.onclick = verifica;
+
+  </script>
+</body>
+
+</html>
